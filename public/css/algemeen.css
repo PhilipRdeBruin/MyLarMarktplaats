@@ -1,0 +1,28 @@
+
+.bg_lgrijs {
+    background      : #ddd; 
+}
+
+.col_grijs {
+    color           : #888;
+}
+
+.px-10 {
+    font-size       : 10px;
+}
+
+.px-12 {
+    font-size       : 12px; 
+}
+
+.px-14 {
+    font-size       : 14px; 
+}
+
+.px-16 {
+    font-size       : 16px; 
+}
+
+.rechts {
+    text-align: right;
+}

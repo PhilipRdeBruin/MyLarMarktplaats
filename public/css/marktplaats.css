@@ -1,0 +1,173 @@
+
+/*   Classes   */
+
+.ad-omschr {
+    max-height      : 250px;
+    overflow        : auto;
+}
+
+.adv-form {
+    padding         : 5px 50px 5px 50px;
+}
+
+.adv-fotolabel {
+    margin-left     : 70px;
+    font-size       : 16px;
+}
+
+.adv_foto-mpl {
+    padding-left    : 10px;
+    height          : 90px;
+    width           : auto;
+}
+
+.adv-prijs {
+    text-align      : right;
+}
+
+.adv-prijs_vanaf {
+    margin          : 0 0 -10px 0;
+}
+
+.adv-tekst {
+    max-width       : 100%; 
+    padding         : 5px 20px 5px 20px;
+    border          : 1px solid #bbb;
+    border-radius   : 10px 10px 0 0;
+}
+.card-fotos {
+    padding         : 10px;
+}
+
+.card-header-mpl {
+    color           : white;
+    background      : #46d;
+    border-radius   : 20px 20px 0 0;  
+}
+
+.cardhdr-pos {
+    padding-left    : 75px;
+    font-size       : 16px;
+    font-weight     : bold;
+}
+
+.card-title-mpl {
+    font-weight     : bold;
+    text-align      : center; 
+}
+
+.droplist-mpl:hover {
+    color           : white;
+    background      : #46d;
+}
+
+.header-biedingen {
+    color           : #24a;
+}
+
+.hor-lijn {
+    margin-top      : 40px;
+    width           : 80%;
+    color           : #444;
+}
+
+.horizontal-scroll, #fotos {
+    margin-right    : 20px;
+    overflow        : auto;
+    white-space     : nowrap;
+}
+
+.navbar-mpl {
+    background      : rgb(225, 200, 175);
+}
+
+.prijs {
+    font-size       : 20px;
+    font-weight     : bold; 
+    color           : #46d;
+}
+
+.tabel-header {
+    color           : white;
+    background      : #46d;
+}
+
+.tabel-header, .tabel-mpl {
+    font-size       : 14px; 
+}
+
+.tabel-mpl tr:hover {
+    color           : rgb(225, 85, 15);
+}
+
+/*   Id's   */
+
+#advertentieknop {
+    position        : absolute; 
+    margin-top      : 180px;
+    padding         : 2px 10px 3px 10px;
+    font-size       : 18px;
+    color           : white;
+    background      : #007bff;
+    border          : 1px solid #007bff;
+    border-radius   : 7px;
+}
+
+#adv-foto:hover {
+    position        : absolute;
+    left            : 0;
+    top             : 100px;
+    width           : 100%;
+    height          : auto;
+    border          : solid white 10px;
+    cursor          : pointer;
+}
+
+#advinv-btmlabel {
+    margin          : 10px auto 10px 60px;
+    font-size       : 14px;
+    color           : #444;
+}
+
+#bieding {
+    padding         : 0 10px 0 5px;
+    width           : 90px;
+    text-align      : right;
+    color           : #24a;
+    border-radius   : 5px;  
+}
+
+#file_to_upload {
+    margin-left     : 50px;
+}
+
+#fotocontainer {
+    background      : #eee;
+}
+
+#fotos {
+    margin          : 30px auto 0px 60px;
+    width           : 85%;
+    height          : 90px;
+/*  border          : 1px solid grey; */
+}
+
+#overzichtstabel {
+    max-height      : 200px;
+    overflow        : auto;
+}
+
+#titel {
+    margin-left     : 250px;
+    color           : #025;
+}
+
+#upload_submit {
+    margin-left     : 50px;
+    padding         : 2px 10px 3px 10px;
+    color           : white;
+    background      : #007bff;
+    border          : 1px solid #007bff;
+    border-radius   : 7px;
+    cursor          : pointer;
+}

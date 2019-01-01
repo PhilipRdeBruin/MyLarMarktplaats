@@ -1,0 +1,48 @@
+
+/*   classes   */
+
+.footer {
+    position        : fixed;
+    width           : 100%;
+    bottom          : 0;
+}
+
+.footercontainer {
+    height          : 50px;
+    font-size       : 12px;
+    color           : white;
+    background      : #333;
+}
+
+.footertable a:link {
+    color           : white;
+}
+
+.footertable a:hover {
+    color           : rgb(42, 203, 231); 
+}
+
+.footertable td {
+    padding-left    : 50px;
+    padding-top     : 5px;
+}
+
+
+/*   id's   */
+
+#contactknop {
+	color			: white;
+	background		: #333;
+	border			: 1px solid #333;
+	text-decoration	: underline;
+	cursor			: pointer;
+	font-size		: 14px;
+}
+
+#contactknop:hover {
+    color           : rgb(42, 203, 231); 
+}
+
+#contactlabel {
+    color           : #333;
+}
