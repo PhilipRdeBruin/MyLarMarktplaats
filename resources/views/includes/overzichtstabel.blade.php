@@ -8,13 +8,13 @@
     <table class="table table-sm" style="margin-bottom:0">
         <thead class="tabel-header">
             <tr>
-                <th class="col-md-2 col-sm-12">Advertentie</th>
-                <th class="col-md-1 col-sm-12">Rubriek</th>
-                <th class="col-md-2 col-sm-12">Verkoper</th>
-                <th class="col-md-4 col-sm-12">Omschrijving</th>
-                <th class="col-md-1 col-sm-6">Prijs</th>
-                <th class="col-md-1 col-sm-6">Geplaatst</th>
-                <th class="col-md-1 col-sm-6">Afstand</th>
+                <th style="width:16.5%">Advertentie</th>
+                <th style="width:10.5%">Rubriek</th>
+                <th style="width:16.5%">Verkoper</th>
+                <th style="width:33%">Omschrijving</th>
+                <th style="width:8%;align=:center">Prijs</th>
+                <th style="width:7%;align=:center">Geplaatst</th>
+                <th style="width:8%;align=:center">Afstand</th>
             </tr>
         </thead>
     </table>
@@ -26,13 +26,13 @@
             @foreach($advertenties as $key => $value)
                 <?php $adv_data = fetch_advertentie_data($value) ?>
                 <tr>
-                    <td class="col-md-2 col-sm-12">{{ $value->ad_titel }}</td>
-                    <td class="col-md-1 col-sm-12">{{ $value->rubrieks->rubr_naam }}</td>
-                    <td class="col-md-2 col-sm-12">{{ $adv_data['naam'] }}</td>
-                    <td class="col-md-4 col-sm-12">{{ $adv_data['omschrijving'] }}</td>
-                    <td class="col-md-1 col-sm-6" align="center">€  {{ $value->prijs }}</td>
-                    <td class="col-md-1 col-sm-6" align="center">{{ $adv_data['tijd'] }}</td>
-                    <td class="col-md-1 col-sm-6" align="center">afstand</td>
+                    <td style="width:17%">{{ $value->ad_titel }}</td>
+                    <td style="width:8%">{{ $value->rubrieks->rubr_naam }}</td>
+                    <td style="width:17%">{{ $adv_data['naam'] }}</td>
+                    <td style="width:34%">{{ $adv_data['omschrijving'] }}</td>
+                    <td style="width:8%;align=:center">€  {{ $value->prijs }}</td>
+                    <td style="width:8%;align=:center">{{ $adv_data['tijd'] }}</td>
+                    <td style="width:8%;align=:center">afstand</td>
                 </tr>
             @endforeach
         </tbody>
