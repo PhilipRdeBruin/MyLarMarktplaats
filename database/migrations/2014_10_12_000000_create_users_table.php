@@ -18,17 +18,17 @@ class CreateUsersTable extends Migration
             $table->string('gebr_naam', 100)->unique();;
 
             $table->string('voornaam');
-            $table->string('initialen', 10);
-            $table->string('tussenv', 10);
+            $table->string('initialen', 10)->nullable();
+            $table->string('tussenv', 10)->nullable();;
             $table->string('achternaam');
 
-            $table->string('straatnaam');
-            $table->string('huisnr', 10);
+            $table->string('straatnaam')->nullable();;
+            $table->string('huisnr', 10)->nullable();;
             $table->string('postcode', 10);
             $table->string('woonplaats');
 
-            $table->string('telefoon', 20);
-            $table->string('mobiel', 20);
+            $table->string('telefoon', 20)->nullable();;
+            $table->string('mobiel', 20)->nullable();;
             $table->string('email', 100)->unique();
             $table->timestamp('email_verified_at')->nullable();
 

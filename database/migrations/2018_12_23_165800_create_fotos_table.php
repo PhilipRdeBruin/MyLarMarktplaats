@@ -18,7 +18,7 @@ class CreateFotosTable extends Migration
             $table->string('fotonaam');
             $table->unsignedinteger('advertentie_id');
             $table->foreign('advertentie_id')->references('id')->on('advertenties');
-            $table->timestamps();
+            $table->timestamps()->nullable();
         });
     }
 

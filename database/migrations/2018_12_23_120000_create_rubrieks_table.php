@@ -16,7 +16,7 @@ class CreateRubrieksTable extends Migration
         Schema::create('rubrieks', function (Blueprint $table) {
             $table->increments('id');
             $table->string('rubr_naam', 100)->unique();
-            $table->timestamps();
+            $table->timestamps()->nullable();;
         });
     }
 

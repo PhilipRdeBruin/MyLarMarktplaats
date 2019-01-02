@@ -27,6 +27,7 @@ class CreateAdvertentiesTable extends Migration
             $table->tinyinteger('vis_email');
             $table->tinyinteger('vis_tel');
             $table->timestamps();
+            $table->string('ad_status', 10)->default('open');
         });
     }
 
