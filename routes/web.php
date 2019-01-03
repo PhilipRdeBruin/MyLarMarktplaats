@@ -24,7 +24,9 @@ Route::get('/index', 'AdvertentieController@index');
 
 Route::get('/plaatsen', 'AdvertentieController@plaatsen');
 
-Route::post('/index', 'AdvertentieController@invoeren');
+Route::post('/index/{advertentie}/{user}', 'AdvertentieController@invoeren_bod');
+
+Route::post('/index', 'AdvertentieController@invoeren_adv');
 
 Route::post('/plaatsen', 'AdvertentieController@foto_uploaden');
 

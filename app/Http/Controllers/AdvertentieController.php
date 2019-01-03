@@ -31,7 +31,7 @@ class AdvertentieController extends Controller
             ->with('rubrieken', $rubrieken);;  
     }
 
-    public function invoeren() {
+    public function invoeren_adv() {
         // slaat de nieuwe advertentie op in de database
         $advertentie = new \App\Advertentie;
 
@@ -52,6 +52,20 @@ class AdvertentieController extends Controller
 
         $advertentie->save();
 
+        // herleidt terug naar de overzichtspagina
+        return \Redirect::to('index');
+    }
+
+    public function invoeren_bod($advertentie, $userid) {
+        // slaat de nieuwe bieding op in de database
+        $bieding = new \App\Bieding;
+
+        $bieding->advertentie_id            = $advertentie;
+        $bieding->koper_id                  = $userid;
+        $bieding->bod                       = Input::get('bieding');
+
+        $bieding->save();
+        
         // herleidt terug naar de overzichtspagina
         return \Redirect::to('index');
     }

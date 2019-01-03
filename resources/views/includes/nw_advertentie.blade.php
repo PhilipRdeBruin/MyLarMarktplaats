@@ -13,7 +13,7 @@
         <div class="card-body card-header-mpl">
             <h5 class="card-title card-title-mpl">Nieuwe advertentie</h5>
         </div>
-        <form style="background:#eee" id="ad_invoerform" role="form" method="post" action="{{action('AdvertentieController@invoeren')}}">
+        <form style="background:#eee" id="ad_invoerform" role="form" method="post" action="{{action('AdvertentieController@invoeren_adv')}}">
 <!--    <form style="background:#eee" id="ad_invoerform" role="form" method="post" action="#">  -->
             @csrf
 <!--            <input type="text" name="dummy">  -->
@@ -67,7 +67,7 @@
             </div>
             <div class="form-group row adv-form">
                 <div class="col-sm-2 offset-sm-9">
-                    <td><input type="submit" id="advertentieknop" name="advertentieknop" value="plaats advertentie"></td></tr>
+                    <td><input type="submit" class="knop-mpl" id="advertentieknop" name="advertentieknop" value="plaats advertentie"></td></tr>
                     <input type="hidden" id="advertentie_inp_hidden" value="plaats advertentie">                    
                 </div>
             </div>

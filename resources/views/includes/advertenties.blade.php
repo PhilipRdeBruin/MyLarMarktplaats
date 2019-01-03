@@ -73,14 +73,26 @@
             @endforeach
         </div>
 
-        @if($value->users->gebr_naam != Auth::user()->gebr_naam)
+
+        <?php
+            $allow_bieding = false;
+            if(Auth::user() != null) {
+                if($value->users->gebr_naam != Auth::user()->gebr_naam) {
+                    $allow_bieding = true;
+                    $userid = Auth::user()->id;
+                }
+            }
+        ?>
+        @if($allow_bieding)
             <div class="card-body bg_lgrijs rechts">
-                <form method="post" action="{{action('AdvertentieController@invoeren')}}">
+                <form method="post" action="/index/{{ $value->id }}/{{ $userid }}">
+                    @csrf
                     <span style="float:left">
                         Plaats jouw bod:&nbsp;&nbsp;&nbsp;
                         <input type="text" id="bieding" name="bieding" value="" placeholder="$  0.00">
                     </span>
-                    <a href="#" class="btn btn-primary" style="width:120px">Bieden</a>
+                    <input type="submit" class="knop-mpl" id="biedingknop" name="biedingknop" value="plaats bod">
+<!--                <a href="/index/1" class="btn btn-primary" style="width:120px">Bieden</a>  -->
                 </form>
             </div>
         @endif

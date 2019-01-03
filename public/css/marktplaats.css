@@ -77,6 +77,15 @@
     white-space     : nowrap;
 }
 
+.knop-mpl {
+    padding         : 2px 10px 3px 10px;
+    font-size       : 18px;
+    color           : white;
+    background      : #007bff;
+    border          : 1px solid #007bff;
+    border-radius   : 7px;
+}
+
 .navbar-mpl {
     background      : rgb(225, 200, 175);
 }
@@ -105,12 +114,14 @@
 #advertentieknop {
     position        : absolute; 
     margin-top      : 180px;
+/*
     padding         : 2px 10px 3px 10px;
     font-size       : 18px;
     color           : white;
     background      : #007bff;
     border          : 1px solid #007bff;
     border-radius   : 7px;
+*/
 }
 
 #adv-foto:hover {
