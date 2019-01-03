@@ -73,15 +73,17 @@
             @endforeach
         </div>
 
-        <div class="card-body bg_lgrijs rechts">
-            <form method="post" action="#">
-                <span style="float:left">
-                    Plaats jouw bod:&nbsp;&nbsp;&nbsp;
-                    <input type="text" id="bieding" name="bieding" value="" placeholder="$  0.00">
-                </span>
-                <a href="#" class="btn btn-primary" style="width:120px">Bieden</a>
-            </form>
-        </div>
+        @if($value->users->gebr_naam != Auth::user()->gebr_naam)
+            <div class="card-body bg_lgrijs rechts">
+                <form method="post" action="{{action('AdvertentieController@invoeren')}}">
+                    <span style="float:left">
+                        Plaats jouw bod:&nbsp;&nbsp;&nbsp;
+                        <input type="text" id="bieding" name="bieding" value="" placeholder="$  0.00">
+                    </span>
+                    <a href="#" class="btn btn-primary" style="width:120px">Bieden</a>
+                </form>
+            </div>
+        @endif
     </div>
 
     <div class="bottom-margin" style="margin-top:60px">

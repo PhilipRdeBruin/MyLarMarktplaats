@@ -24,9 +24,9 @@ Route::get('/index', 'AdvertentieController@index');
 
 Route::get('/plaatsen', 'AdvertentieController@plaatsen');
 
-Route::post('/plaatsen', 'AdvertentieController@foto_uploaden');
-
 Route::post('/index', 'AdvertentieController@invoeren');
+
+Route::post('/plaatsen', 'AdvertentieController@foto_uploaden');
 
 Auth::routes();
 

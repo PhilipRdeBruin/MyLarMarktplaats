@@ -14,6 +14,7 @@
             <h5 class="card-title card-title-mpl">Nieuwe advertentie</h5>
         </div>
         <form style="background:#eee" id="ad_invoerform" role="form" method="post" action="{{action('AdvertentieController@invoeren')}}">
+<!--    <form style="background:#eee" id="ad_invoerform" role="form" method="post" action="#">  -->
             @csrf
 <!--            <input type="text" name="dummy">  -->
             <input type="hidden" name="verkoper" value="{{ Auth::user()->gebr_naam }}">
