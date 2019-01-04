@@ -9,15 +9,38 @@
 
 <div class="collapse navbar-collapse" id="navbarCollapse">
     <ul class="navbar-nav ml-auto">
-        <li class="navbar-item">
-            <a href="/index" class="nav-link {{ $act_lnk['homepage'] }}">Startpagina</a>
-        </li>
-        <li class="navbar-item">
-            <a href="/plaatsen" class="nav-link {{ $act_lnk['plaatsen'] }}">Advertentie plaatsen</a>
-        </li>
-        <li class="navbar-item">
-            <a href="/profiel" class="nav-link {{ $act_lnk['profiel'] }} disabled">Mijn Profiel</a>
-        </li>	
+
+        @if($active_navlink == "homepage")
+            <li class="navbar-item">
+                <select class="form-control" id="filterkey" name="filterkey">
+                    <option selected>filter</option>
+                    <option value="rubriek">categorie</option>
+                    <option value="prijs">prijs</option>
+                    <option value="afstand">afstand</option>
+                </select>
+            </li>
+            <span class="zalm">xxxxxxxxxxxx</span>
+        @else
+            <li class="navbar-item">
+                <a href="/index" class="nav-link {{ $act_lnk['homepage'] }}">Startpagina</a>
+            </li>
+        @endif
+
+        @guest
+            <li class="navbar-item">
+                <span class="nav-link {{ $act_lnk['plaatsen'] }} disabled">Advertentie plaatsen</span>
+            </li>
+            <li class="navbar-item">
+                <span class="nav-link {{ $act_lnk['profiel'] }} disabled">Mijn Profiel</span>
+            </li>            
+        @else
+            <li class="navbar-item">
+                <a href="/plaatsen" class="nav-link {{ $act_lnk['plaatsen'] }}">Advertentie plaatsen</a>
+            </li>
+            <li class="navbar-item">
+                <a href="/profiel" class="nav-link {{ $act_lnk['profiel'] }}">Mijn Profiel</a>
+            </li>
+        @endif
         <li>
             <span class="col_grijs">&nbsp;&nbsp;<sub>||</sub>&nbsp;&nbsp;</span>
         </li>

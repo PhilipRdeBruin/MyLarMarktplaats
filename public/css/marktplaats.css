@@ -4,6 +4,8 @@
 .ad-omschr {
     max-height      : 250px;
     overflow        : auto;
+    color           : #025;
+    background      : #ddd; 
 }
 
 .adv-form {
@@ -85,7 +87,7 @@
     border          : 1px solid #007bff;
     border-radius   : 7px;
 }
-
+ 
 .navbar-mpl {
     background      : rgb(225, 200, 175);
 }
@@ -107,6 +109,10 @@
 
 .tabel-mpl tr:hover {
     color           : rgb(225, 85, 15);
+}
+
+.zalm {
+    color           : rgb(225, 200, 175);
 }
 
 /*   Id's   */
@@ -150,6 +156,15 @@
 
 #file_to_upload {
     margin-left     : 50px;
+}
+
+#filterkey {
+    margin-top      : 5px;
+    padding         : 0;
+    width           : 100px;
+    height          : 30px;
+    background      : rgb(225, 200, 175);
+    border          : 1px solid rgb(210, 185, 165);
 }
 
 #fotocontainer {

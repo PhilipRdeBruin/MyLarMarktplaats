@@ -1,9 +1,7 @@
 
 <?php /* ** Deze include zou niet nodig mogen zijn... (reeds in 'Head' ge-include...)
          ** is het echter toch!!  Vragen waarom...
-      */ 
-//      $msg = Auth::user()->gebr_naam;
-//      echo '<script type="text/javascript">alert("' . $msg . '")</script>';    
+      */  
 ?>
 
 <?php include($_SERVER['DOCUMENT_ROOT'] . '/functions/php_functies.php'); ?>
@@ -16,7 +14,7 @@
         <form style="background:#eee" id="ad_invoerform" role="form" method="post" action="{{action('AdvertentieController@invoeren_adv')}}">
 <!--    <form style="background:#eee" id="ad_invoerform" role="form" method="post" action="#">  -->
             @csrf
-<!--            <input type="text" name="dummy">  -->
+            <?php // $naam = (Auth::user() != null) ? Auth::user()->gebr_naam : "" ?>
             <input type="hidden" name="verkoper" value="{{ Auth::user()->gebr_naam }}">
             <div class="form-group row adv-form" style="padding-top:50px">
                 <label class="col-sm-3 col-form-label" for="ad_titel">Advertentie naam <super>*</super></label>

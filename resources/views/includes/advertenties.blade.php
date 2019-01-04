@@ -10,7 +10,7 @@
         </div>
         
         <ul class="list-group list-group-flush">
-            <li class="list-group-item px-14 ad-omschr">{{ $value->ad_omschrijving }}</li>
+            <li class="list-group-item ad-omschr">{{ $value->ad_omschrijving }}</li>
 
                 <li class="list-group-item">
                     <div class="row">
@@ -83,10 +83,13 @@
                 }
             }
         ?>
-        @if($allow_bieding)
-            <div class="card-body bg_lgrijs rechts">
+        <div class="card-body bg_lgrijs rechts">
+            @if($allow_bieding)
                 <form method="post" action="/index/{{ $value->id }}/{{ $userid }}">
                     @csrf
+                    <input type="hidden" name="vraagprijs" value="{{ $value->prijs }}">
+                    <input type="hidden" name="bij_opbod" value="{{ $value->b_bij_opbod }}">
+                    <input type="hidden" name="onder_vraagprijs" value="{{ $value->b_onder_vraagprijs }}">
                     <span style="float:left">
                         Plaats jouw bod:&nbsp;&nbsp;&nbsp;
                         <input type="text" id="bieding" name="bieding" value="" placeholder="$  0.00">
@@ -94,8 +97,8 @@
                     <input type="submit" class="knop-mpl" id="biedingknop" name="biedingknop" value="plaats bod">
 <!--                <a href="/index/1" class="btn btn-primary" style="width:120px">Bieden</a>  -->
                 </form>
-            </div>
-        @endif
+            @endif
+        </div>
     </div>
 
     <div class="bottom-margin" style="margin-top:60px">

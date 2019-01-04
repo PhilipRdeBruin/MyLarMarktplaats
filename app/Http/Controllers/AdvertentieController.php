@@ -56,16 +56,37 @@ class AdvertentieController extends Controller
         return \Redirect::to('index');
     }
 
-    public function invoeren_bod($advertentie, $userid) {
+    public function invoeren_bod($advertentie_id, $user_id) {
         // slaat de nieuwe bieding op in de database
+
+        $vraagprijs = input::get('vraagprijs');
+        $bij_opbod = input::get('bij_opbod');
+        $onder_vraagprijs = input::get('onder_vraagprijs');
+        $max_bod = \App\Bieding::where('advertentie_id', $advertentie_id)->max('bod');
+
+        $advertentie = new \App\Advertentie;
         $bieding = new \App\Bieding;
 
-        $bieding->advertentie_id            = $advertentie;
-        $bieding->koper_id                  = $userid;
+        $bieding->advertentie_id            = $advertentie_id;
+        $bieding->koper_id                  = $user_id;
         $bieding->bod                       = Input::get('bieding');
 
+        if ($bieding->bod <= $max_bod) {
+            return \Redirect::to('index');
+        } 
+        if ($onder_vraagprijs == 0 && $bieding->bod < $vraagprijs) {
+            $msg = "Biedingen onder de vraagprijs worden niet geaccepteerd.";
+            echo '<script type="text/javascript">alert("' . $msg . '")</script>'; 
+            return \Redirect::to('index');
+        }
+        if ($bij_opbod == 0 && $bieding->bod >= $vraagprijs) {
+            $advertentie->ad_status         = "voorlopig";
+            // nog acties bepalen over hoe hier mee om te gaan...
+        }
+
+
         $bieding->save();
-        
+
         // herleidt terug naar de overzichtspagina
         return \Redirect::to('index');
     }
